@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOGO Offer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f8f8;
+        margin: 0;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+      }
+      h1 {
+        color: #ff4081;
+        margin-bottom: 20px;
+      }
+      .option {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .option:hover {
+        transform: scale(1.05);
+      }
+      .option input {
+        display: none;
+      }
+      .option label {
+        display: block;
+      }
+      .option .discount {
+        background-color: #ff4081;
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 2px 5px;
+        border-radius: 3px;
+      }
+      .option .price {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .option .original-price {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+      .most-popular {
+        border-color: #ff4081;
+      }
+      .most-popular::after {
+        content: 'MOST POPULAR';
+        color: #fff;
+        background-color: #ff4081;
+        padding: 2px 5px;
+        font-size: 12px;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        border-radius: 3px;
+      }
+      .size-color {
+        display: none;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .option:hover .size-color {
+        display: flex;
+      }
+      .size-color select {
+        width: 45%;
+      }
+      .free-delivery {
+        margin-top: 10px;
+        color: #ff4081;
+        font-weight: bold;
+        display: flex;
+        gap: 70px;
+      }
+      .free-delivery p {
+        margin-top: 2px;
+        color: black;
+      }
+      .total {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .add-to-cart {
+        background-color: #ff4081;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      .add-to-cart:hover {
+        background-color: #e91e63;
+      }
+      .powered-by {
+        font-size: 12px;
+        color: #aaa;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>YAY! It's BOGO</h1>
+      <div class="option" id="option1">
+        <input type="radio" name="units" id="one-unit" />
+        <label for="one-unit">
+          <span class="discount">10% Off</span>
+          1 Unit
+          <div class="price">$10.00 USD</div>
+          <div class="original-price">$24.00 USD</div>
+          <div class="size-color">
+            <select>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+
+            <select>
+              <option value="Red">Red</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+            </select>
+          </div>
+        </label>
+      </div>
+      <div class="option most-popular" id="option2">
+        <input type="radio" name="units" id="two-units" />
+        <label for="two-units">
+          <span class="discount">20% Off</span>
+          2 Units
+          <div class="price">$18.00 USD</div>
+          <div class="original-price">$24.00 USD</div>
+          <div class="size-color">
+            <select>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+            <select>
+              <option value="Red">Red</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+            </select>
+          </div>
+        </label>
+      </div>
+      <div class="option" id="option3">
+        <input type="radio" name="units" id="three-units" />
+        <label for="three-units">
+          <span class="discount">30% Off</span>
+          3 Units
+          <div class="price">$24.00 USD</div>
+          <div class="original-price">$24.00 USD</div>
+        </label>
+      </div>
+      <div class="free-delivery">
+        Free Delivery
+        <p>Total: $0.00 USD</p>
+      </div>
+
+      <button class="add-to-cart">Add to Cart</button>
+      <div class="powered-by">Powered by Pumper</div>
+    </div>
+  </body>
+</html>
